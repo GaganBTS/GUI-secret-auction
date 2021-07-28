@@ -21,8 +21,12 @@ def find_highest_bidder(bidding_record):
 
 
 def enter_details():
-    name = name_entry.get()
-    price = price_entry.get()
+   name = name_entry.get()
+   price = price_entry.get()
+   if name=="" or price == "":
+
+        messagebox.showerror(title="EMPTY",message="Please don't leave any fields empty")
+   else:
     try:
       price2 = int(price)
     except:
